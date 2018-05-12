@@ -722,7 +722,14 @@ class App extends App$1 {
     });
     this.vpass = new VignettePass_1(2, 1.5);
     this.camera.position.y = 5;
+    this.camera.rotation.x = -0.2;
     this.lastCycle = 0;
+    this.onMouseMove = this.onMouseMove.bind(this);
+    window.addEventListener('mousemove', this.onMouseMove);
+  }
+  onMouseMove(e) {
+    this.camera.rotation.y = (-(e.clientX / window.innerWidth) * 2 + 1) * 0.2;
+    this.camera.rotation.x = (((e.clientY / window.innerHeight) * 2 - 1) * 0.1) - 0.2;
   }
   update(t, delta) {
     if ((t - this.lastCycle) > CYCLE_TIME) {
