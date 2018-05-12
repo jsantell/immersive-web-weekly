@@ -1,5 +1,5 @@
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif;
   font-weight: 300;
   margin: 0;
   padding: 0;
@@ -8,13 +8,14 @@ body {
   width: 100%;
   height: 100vh;
   background: #000000;
+  font-size: 120%;
 }
 
 #background {
   background: #000000 no-repeat center center fixed;
   background-size: cover;
   /* Use a blur so we can get away with a lower quality image */
-  filter: blur(3px);
+  filter: blur(5px);
 }
 
 #background.show {
@@ -26,11 +27,11 @@ body {
   padding: 20px;
   width: 60%;
   min-width: 200px;
+  max-width: 600px;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
-  margin-top: 20%;
-  padding: 10px;
+  top: 10%;
   border-radius: 5px;
   color: #fefefe;
   background-color: rgba(0.1, 0.1, 0.1, 0.5);
@@ -43,13 +44,14 @@ body {
 
 #content h1 {
   text-align: center;
-  font-weight: 400;
+  font-weight: 100;
   margin-top: 0;
 }
 
 #signup {
   background-color: #46d6fd;
   padding: 10px;
+  text-align: center;
 }
 
 #signup .field {
@@ -62,7 +64,8 @@ body {
 
 #signup .email {
   height: 30px;
-  width: 300px;
+  min-width: 150px;
+  width: 40%;
   padding: 0px 4px;
   border: 1px solid white;
 }
@@ -70,9 +73,13 @@ body {
 #signup .submit {
   display: inline;
   height: 34px;
-  padding: 3px;
+  padding: 3px 10px;
   margin: 0;
   border: 1px solid white;
+  background-color: #b450ce;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 canvas {
