@@ -1,0 +1,22 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "metalsmith"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jstransformer-handlebars": "^1.1.0",
+    "metalsmith": "^2.3.0",
+    "metalsmith-date-formatter": "^1.0.2",
+    "metalsmith-drafts": "0.0.1",
+    "metalsmith-layouts": "^2.1.0",
+    "metalsmith-markdown": "^0.2.2",
+    "metalsmith-perma": "^1.0.0",
+    "metalsmith-permalinks": "^0.5.0",
+    "metalsmith-templates": "^0.7.0"
+  }
+}

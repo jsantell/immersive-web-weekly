@@ -1,0 +1,46 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  background-color: #94d0ff;
+  color: white;
+  padding: 15px 0;
+  margin-bottom: 0px;
+}
+
+.info {
+  color: #ad8cff;
+  font-size: 80%;
+}
+
+#content {
+  margin: 0 auto;
+  width: 800px;
+}
+
+#content a, #content a:visited {
+  color: #8795e8;
+  text-decoration: none;
+}
+
+.author {
+  font-size: 90%;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.tag {
+  padding: 0px 3px;
+  border-radius: 3px;
+}
+.sponsored {
+  background-color: #ff0077;
+}
+.tutorial {
+  background-color: #00ff00;
+}
