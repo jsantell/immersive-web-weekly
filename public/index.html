@@ -3,6 +3,7 @@
     <head>
         <title>Immersive Web Weekly</title>
         <link rel="stylesheet" type="text/css" href="styles/index.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:url" content="https://immersivewebweekly.com">
         <meta name="twitter:title" content="Immersive Web Weekly">
@@ -36,14 +37,13 @@
         <div id="background"></div>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119157804-1"></script>
         <script>
-            if (window.location.hostname !== 'immersivewebweekly.com') {
-                return;
-            }
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+            if (window.location.hostname === 'immersivewebweekly.com') {
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
 
-            gtag('config', 'UA-119157804-1');
+                gtag('config', 'UA-119157804-1');
+            }
         </script>
         <script src="index.js"></script>
     </body>
