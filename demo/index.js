@@ -1,7 +1,8 @@
-import { FogExp2, Color, Mesh, PlaneBufferGeometry, MeshBasicMaterial, Matrix4, Vector3 } from 'three';
+import { ShaderMaterial, Color, Mesh, PlaneBufferGeometry, MeshBasicMaterial, Matrix4, Vector3 } from 'three';
 import ThreeApp from '@jsantell/three-app';
 import BarycentricMaterial from './lib/BarycentricMaterial.js';
-import noisyBarycentricVertexShader from './lib/noisy-barycentric-vert.glsl';
+import noisyVertex from './lib/noisy-mountain-vert.glsl';
+import noisyFrag from './lib/noisy-mountain-frag.glsl';
 import WAGNER from './lib/wagner/index.js';
 import BloomPass from './lib/wagner/src/passes/bloom/MultiPassBloomPass';
 import VPass from './lib/wagner/src/passes/vignette/VignettePass.js';
@@ -9,8 +10,8 @@ import VPass from './lib/wagner/src/passes/vignette/VignettePass.js';
 const CYCLE_TIME = 1000;
 const MOVEMENT = 10;
 const MOUNTAIN_NOISE_MOD = 0.2;
-const MOUNTAIN_POS_DAMPEN = 0.004;
-const MOUNTAIN_DEFORM_SPEED = 0.00003;
+const MOUNTAIN_POS_DAMPEN = 0.006;
+const MOUNTAIN_DEFORM_SPEED = 0.00001;
 
 class App extends ThreeApp {
   init() {
@@ -36,26 +37,22 @@ class App extends ThreeApp {
 
     /* create mountains */
 
-    // The barycentric material only works with certain combinations
-    // of vertices. For some reason, this current one doesn't "work",
-    // resulting in a more solid look, which turned out pretty cool,
-    // so keeping it.
     const mountainGeo = new PlaneBufferGeometry(2, 1, 20, 10);
     mountainGeo.applyMatrix(new Matrix4().makeRotationAxis(new Vector3(1, 0, 0), Math.PI / -2.5));
-    BarycentricMaterial.applyBarycentricCoordinates(mountainGeo);
 
-    const mountainMat = new BarycentricMaterial({
-      color: new Color(0x222222),
-      wireframeColor: new Color(0xb450ce),
-      alpha: 1,
-      wireframeAlpha: 1,
-      width: 2,
-      vertexShader: noisyBarycentricVertexShader,
+    const mountainMat = new ShaderMaterial({
+      uniforms: {
+        noiseMod: { value: MOUNTAIN_NOISE_MOD },
+        posDampen: { value: MOUNTAIN_POS_DAMPEN },
+        time: { value: 0 },
+        nearColor: { value: new Color(0xb450ce) },
+        farColor: { value: new Color(0x461d50) },
+        nearEdge: { value: 50 },
+        farEdge: { value: 150 },
+      },
+      vertexShader: noisyVertex,
+      fragmentShader: noisyFrag,
     });
-    mountainMat.uniforms.noiseMod = { value: MOUNTAIN_NOISE_MOD };
-    mountainMat.uniforms.posDampen = { value: MOUNTAIN_POS_DAMPEN };
-    mountainMat.uniforms.time = { value: 0 };
-    mountainMat.uniformsNeedUpdate = true;
 
     this.mountain = new Mesh(mountainGeo, mountainMat);
     this.mountain.scale.multiplyScalar(100);
