@@ -32,5 +32,10 @@
     "@jsantell/three-app": "^1.0.0",
     "glsl-solid-wireframe": "^1.0.1",
     "three": "^0.92.0"
-  }
+  },
+  "subdomain": "immersivewebweekly",
+  "domains": [
+    "immersivewebweekly.com",
+    "www.immersivewebweekly.com"
+  ]
 }
