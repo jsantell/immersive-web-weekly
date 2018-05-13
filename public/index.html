@@ -34,6 +34,17 @@
             <div id="details">Published by <a href="https://twitter.com/jsantell">@jsantell</a>, <a href="privacy/">privacy policy</a>, archives (coming soon)</div>
         </div>
         <div id="background"></div>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119157804-1"></script>
+        <script>
+            if (window.location.hostname !== 'immersivewebweekly.com') {
+                return;
+            }
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-119157804-1');
+        </script>
         <script src="index.js"></script>
     </body>
 </html>
