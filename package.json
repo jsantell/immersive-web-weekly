@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "metalsmith",
+    "build": "node build/build.js",
     "build-demo": "rollup -c",
     "build-all": "npm run build && npm run build-demo"
   },
