@@ -6,6 +6,9 @@ const util = require('util');
 const yaml = require('js-yaml');
 const Handlebars = require('handlebars');
 const moment = require('moment');
+const markdown = require('./parse-markdown');
+const links = require('../links.json').links;
+const parseDomain = require('parse-domain');
 
 const CONTENT_DIR = path.join(__dirname, '..', 'content');
 const EMAIL_OUTPUT_DIR = path.join(__dirname, '..', 'emails');
@@ -36,6 +39,23 @@ async function build (type) {
     meta.issue = issue;
     meta.permalink = `https://immersivewebweekly.com/issues/${meta.issue}`;
     meta.date = moment(meta.date).format('MMMM DD, YYYY');
+    meta.links.map(link => {
+      // Reference an authorLink from links.json if we can
+      if (!link.authorLink) {
+        const authorLink = links[link.author.toLowerCase()];
+        if (!authorLink) {
+          throw new Error(`Link for ${link.title} does not have a valid authorLink.`);
+        }
+        link.authorLink = authorLink;
+      }
+
+      // Add domain
+      const { domain, tld } = parseDomain(link.url);
+      link.domain = `${domain}.${tld}`;
+
+      // Build markdown
+      link.content = markdown(link.content)
+    });
 
     const emailMarkup = emailTemplate(meta);
     const issueMarkup = issueTemplate(meta);

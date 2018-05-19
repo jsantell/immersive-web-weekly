@@ -11,7 +11,8 @@
       <p>Preview/subtitle content: {{preview}}</p>
       {{#each links}}
           <h2><a href="{{url}}">{{title}}</a></h2>
-          <p>{{content}}</p>
+          {{{content}}}
+          <span class="domain"><a href="{{url}}">{{domain}}</a></span>
           <span class="author"><a href="{{authorLink}}">{{author}}</a></span>
           {{#each tags}}
              <span class="tag tag-{{this}}">{{this}}</span>
