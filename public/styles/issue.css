@@ -38,9 +38,21 @@ h1 {
   padding: 0px 3px;
   border-radius: 3px;
 }
-.sponsored {
+.tag-sponsored {
   background-color: #ff0077;
 }
-.tutorial {
+.tag-tutorial {
   background-color: #00ff00;
+}
+.tag-announcement {
+  background-color: #ff0077;
+}
+.tag-article {
+  background-color: #0000ff;
+}
+.tag-video {
+  background-color: #ffff00;
+}
+.tag-project {
+  background-color: #ffff00;
 }

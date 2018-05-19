@@ -561,7 +561,7 @@
                                                 <tr>
                                                     <td valign="top">
                                                         <div mc:edit="preheader_rightcol_content">
-                                                            <p><a href="https://immersivewebweekly.com/issues/{{issue}}" target="_blank">View email in your browser</a></p>
+                                                            <p><a href="{{permalink}}" target="_blank">View email in your browser</a></p>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -598,7 +598,9 @@
                                 <div mc:edit="body_content">
                                     <h1>Immersive Web Weekly</h1>
                                     <div class="info">Issue #{{issue}}, {{date}}</div>
-                                    {{{ contents }}}
+                                    {{#each posts}}
+                                        <h2
+                                    {{/each}}
                                 </div>
                                 <!-- // END MODULE: BODY CONTENT -->
 
