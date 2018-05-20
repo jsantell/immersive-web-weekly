@@ -1,9 +1,11 @@
 {
   "links": {
     "blair macintyre": "https://blairmacintyre.me/",
+    "mozilla": "https://mozilla.org/",
     "sumerian": "https://aws.amazon.com/sumerian/",
     "svvr": "https://svvr.com",
     "virtuleap": "https://virtuleap.com",
-    "voices of vr": "http://voicesofvr.com"
+    "voices of vr": "http://voicesofvr.com",
+    "webxr viewer": "https://github.com/mozilla/webxr-viewer"
   }
 }
