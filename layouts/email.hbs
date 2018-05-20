@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
 <head>
-    <!-- This is a simple example template that you can edit to create your own custom templates -->
 
     <!--[if gte mso 15]>
     <xml>
@@ -125,14 +124,19 @@
 	@section Heading 1
 	*/
 		h1{
-			/*@editable*/color:#222222;
-			/*@editable*/font-family:Helvetica;
-			/*@editable*/font-size:40px;
+			/*@editable*/color:#ffffff;
+			/*@editable*/font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+			/*@editable*/font-size:36px;
 			/*@editable*/font-style:normal;
-			/*@editable*/font-weight:bold;
+			/*@editable*/font-weight:200;
 			/*@editable*/line-height:150%;
 			/*@editable*/letter-spacing:normal;
-			/*@editable*/text-align:left;
+            /*@editable*/text-align:center;
+            background-color: #0a84ff;
+            text-transform: uppercase;
+            padding: 15px 0;
+            margin-top: 0px;
+            margin-bottom: 0px;
 		}
 	/*
 	@tab Page
@@ -140,13 +144,14 @@
 	*/
 		h2{
 			/*@editable*/color:#222222;
-			/*@editable*/font-family:Helvetica;
-			/*@editable*/font-size:28px;
+			/*@editable*/font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+			/*@editable*/font-size:22px;
 			/*@editable*/font-style:normal;
-			/*@editable*/font-weight:bold;
+			/*@editable*/font-weight:300;
 			/*@editable*/line-height:150%;
 			/*@editable*/letter-spacing:normal;
-			/*@editable*/text-align:left;
+            /*@editable*/text-align:left;
+            margin: 25px 0 15px 0;
 		}
 	/*
 	@tab Page
@@ -207,9 +212,9 @@
 	@section Preheader Link
 	*/
 		#templatePreheader a,#templatePreheader p a{
-			/*@editable*/color:#656565;
-			/*@editable*/font-weight:normal;
-			/*@editable*/text-decoration:underline;
+              color: #0c0c0d;
+              text-decoration: none;
+              border-bottom: 1px solid #0a84ff;
 		}
 	/*
 	@tab Header
@@ -242,9 +247,9 @@
 	@section Header Link
 	*/
 		#templateHeader a,#templateHeader p a{
-			/*@editable*/color:#237A91;
-			/*@editable*/font-weight:normal;
-			/*@editable*/text-decoration:underline;
+              color: #0c0c0d;
+              text-decoration: none;
+              border-bottom: 1px solid #0a84ff;
 		}
 	/*
 	@tab Body
@@ -277,9 +282,9 @@
 	@section Body Link
 	*/
 		#templateBody a,#templateBody p a{
-			/*@editable*/color:#237A91;
-			/*@editable*/font-weight:normal;
-			/*@editable*/text-decoration:underline;
+              color: #0c0c0d;
+              text-decoration: none;
+              border-bottom: 1px solid #0a84ff;
 		}
 	/*
 	@tab Footer
@@ -516,8 +521,47 @@
 			/*@editable*/font-size:14px !important;
 			/*@editable*/line-height:150% !important;
 		}
+}
 
-}</style></head>
+.info {
+  color: #888;
+  font-size: 90%;
+  margin-left: 30px;
+}
+
+#overview {
+  font-style: italic;
+  margin: 15px 0px 0px 30px;
+  line-height: 1.5;
+}
+
+#content {
+  padding: 0px 30px 20px 30px;
+}
+
+#content p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+#content .meta {
+  font-size: 80%;
+  color: #3c484e;
+  margin-bottom: 40px;
+}
+.domain::before {
+  content: ' > '
+}
+.domain::after {
+  content: ' | '
+}
+
+#content .meta .author{
+  font-weight: 300;
+  text-transform: uppercase;
+}
+</style></head>
 
 <body>
     <center>
@@ -548,7 +592,7 @@
                                                 <tr>
                                                     <td valign="top">
                                                         <div mc:edit="preheader_leftcol_content">
-                                                            <p>{{preview}}</p>
+                                                            <p id="preview">{{preview}}</p>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -598,9 +642,30 @@
                                 <div mc:edit="body_content">
                                     <h1>Immersive Web Weekly</h1>
                                     <div class="info">Issue #{{issue}}, {{date}}</div>
-                                    {{#each posts}}
-                                        <h2
-                                    {{/each}}
+                                    <div id="overview">
+                                        {{{overview}}} {{#if signed}}<span>– {{signed}}</span>{{/if}}
+                                    </div>
+                                    <div id="content">
+                                        {{#each links}}
+                                        <h2><a href="{{url}}" target="_new">{{title}}</a></h2>
+                                        {{{content}}}
+                                        <div class="meta">
+                                            <span class="domain"><a href="{{url}}">{{domain}}</a></span>
+                                            <span class="author">
+                                                {{#if authorLink}}
+                                                <a href="{{authorLink}}">
+                                                    {{/if}}
+                                                    {{author}}
+                                                    {{#if authorLink}}
+                                                </a>
+                                                {{/if}}
+                                            </span>
+                                            {{#each tags}}
+                                            <span class="tag tag-{{this}}">{{this}}</span>
+                                            {{/each}}
+                                        </div>
+                                        {{/each}}
+                                    </div>
                                 </div>
                                 <!-- // END MODULE: BODY CONTENT -->
 

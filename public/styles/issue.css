@@ -85,9 +85,11 @@ h2 {
 }
 .author::before {
 }
+/*
 .author::after {
   content: ' | '
 }
+*/
 
 .tag {
   font-weight: 300;
@@ -95,6 +97,8 @@ h2 {
   border-radius: 3px;
   background-color: #eee;
   border: 1px solid;
+  text-transform: uppercase;
+  display: none;
 }
 .tag-tutorial {
   border-color: #30e60b;
@@ -104,4 +108,51 @@ h2 {
 }
 .tag-event {
   border-color: #ff1ad9;
+}
+
+.signup-wrapper {
+  background: #000000 no-repeat;
+  background-size: 100% 300%;
+  background-image: url(../images/large_image.jpg);
+  background-position-y: 50%;
+  height: 150px;
+  text-align: center;
+}
+
+.signup .signup-info {
+  padding: 20px 50px;
+  margin: 0;
+}
+
+.signup {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  height: 100%;
+}
+.signup .field {
+  display: inline;
+}
+
+.signup label {
+  display: none;
+}
+
+.signup .email {
+  height: 30px;
+  min-width: 150px;
+  width: 40%;
+  padding: 0px 4px;
+  border: 1px solid white;
+}
+
+.signup .submit {
+  display: inline;
+  height: 34px;
+  padding: 3px 10px;
+  margin: 0;
+  border: 1px solid white;
+  background-color: #9400ff;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
 }
