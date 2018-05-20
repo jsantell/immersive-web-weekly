@@ -39,12 +39,13 @@ async function build (type) {
     meta.issue = issue;
     meta.permalink = `https://immersivewebweekly.com/issues/${meta.issue}`;
     meta.date = moment.utc(meta.date).format('MMMM DD, YYYY');
+    meta.overview = markdown(meta.overview);
     meta.links.map(link => {
       // Reference an authorLink from links.json if we can
       if (!link.authorLink) {
         const authorLink = links[link.author.toLowerCase()];
         if (!authorLink) {
-          throw new Error(`Link for ${link.title} does not have a valid authorLink.`);
+          // throw new Error(`Link for ${link.title} does not have a valid authorLink.`);
         }
         link.authorLink = authorLink;
       }
