@@ -39,7 +39,7 @@ body {
 }
 
 #content a {
-  color: #46d6fd;
+  color: #0a84ff;
 }
 
 #content h1 {
@@ -49,7 +49,7 @@ body {
 }
 
 #signup {
-  background-color: #46d6fd;
+  background-color: #0a84ff;
   padding: 10px;
   text-align: center;
 }
@@ -76,7 +76,7 @@ body {
   padding: 3px 10px;
   margin: 0;
   border: 1px solid white;
-  background-color: #b450ce;
+  background-color: #9400ff;
   color: white;
   text-transform: uppercase;
   cursor: pointer;
