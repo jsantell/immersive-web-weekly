@@ -38,7 +38,7 @@ async function build (type) {
     // Update meta with some more values for our templates
     meta.issue = issue;
     meta.permalink = `https://immersivewebweekly.com/issues/${meta.issue}`;
-    meta.date = moment(meta.date).format('MMMM DD, YYYY');
+    meta.date = moment.utc(meta.date).format('MMMM DD, YYYY');
     meta.links.map(link => {
       // Reference an authorLink from links.json if we can
       if (!link.authorLink) {
