@@ -22,7 +22,8 @@
     "rollup-plugin-commonjs": "^8.2.1",
     "rollup-plugin-glslify": "^1.0.4",
     "rollup-plugin-node-resolve": "^3.0.0",
-    "showdown": "^1.8.6"
+    "showdown": "^1.8.6",
+    "xmldom": "^0.1.27"
   },
   "dependencies": {
     "@jsantell/three-app": "^1.0.0",
