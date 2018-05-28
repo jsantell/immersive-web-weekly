@@ -14,3 +14,7 @@
 
 * `npm run build` Builds issues in `content/` using templates from `layouts/` as HTML emails (`emails/`) and full HTML issues (`public/issues/`)
 * `npm run build-demo` Builds the demo for the landing page in `demo/` to `public/index.js`
+
+## Markdown
+
+Some fields in the issue YAML may be parsed as markdown (`overview`, `links.content`) via `showdown` parser. In `build/parse-markdown.js`, all reference links, (e.g. `Welcome to [markdown]!`) will be linked using the `links.json` reference in the project root. This allows referencing the same entity/link multiple times over several issues or links. All links are compared as lower casae, hence all keys in `links.json` being lowercase. Not tested that well, could break for non-english/non-alphanumeric characters.
