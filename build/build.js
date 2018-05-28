@@ -43,11 +43,14 @@ async function build (type) {
     meta.issue = issue;
     meta.permalink = `https://immersivewebweekly.com/issues/${meta.issue}`;
     meta.date = moment.utc(meta.date).format('MMMM DD, YYYY');
-    meta.overview = markdown(meta.overview);
-    // Strip out the markdown for the description
-    meta.overviewShort = new DOMParser().parseFromString(meta.overview, 'text/html').documentElement.textContent;
-    meta.overviewShort = meta.overviewShort.substr(0, OVERVIEW_SHORT_LENGTH);
-    meta.overviewShort += meta.overview.length > OVERVIEW_SHORT_LENGTH ? '...' : '';
+
+    if (meta.overview) {
+      meta.overview = markdown(meta.overview);
+      // Strip out the markdown for the description
+      meta.overviewShort = new DOMParser().parseFromString(meta.overview, 'text/html').documentElement.textContent;
+      meta.overviewShort = meta.overviewShort.substr(0, OVERVIEW_SHORT_LENGTH);
+      meta.overviewShort += meta.overview.length > OVERVIEW_SHORT_LENGTH ? '...' : '';
+    }
 
     meta.links.map(link => {
       // Reference an authorLink from links.json if we can
