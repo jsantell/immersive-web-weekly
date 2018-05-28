@@ -1,5 +1,6 @@
 {
-  "name": "blog",
+  "name": "immersive-web-weekly",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,8 +9,7 @@
     "build-demo": "rollup -c",
     "build-all": "npm run build && npm run build-demo"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Jordan Santell <jordan@jsantell.com>",
   "devDependencies": {
     "glsl-easings": "^1.0.0",
     "glsl-noise": "0.0.0",
