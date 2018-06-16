@@ -53,13 +53,24 @@ async function build (type) {
     }
 
     meta.links.map(link => {
-      // Reference an authorLink from links.json if we can
-      if (!link.authorLink) {
-        const authorLink = links[link.author.toLowerCase()];
-        if (!authorLink) {
-          // throw new Error(`Link for ${link.title} does not have a valid authorLink.`);
+      if (link.author && link.authors) {
+        throw new Error('Cannot have both `author` and `authors`');
+      }
+
+      if (link.author) {
+        link.authors = [{ author: link.author, authorLink: link.authorLink }];
+      }
+
+      // Fill in empty author links from the links
+      for (let author of link.authors) {
+        // Reference an authorLink from links.json if we can
+        if (!author.authorLink) {
+          const authorLink = links[author.author.toLowerCase()];
+          if (!authorLink) {
+            // throw new Error(`Link for ${link.title} does not have a valid authorLink.`);
+          }
+          author.authorLink = authorLink;
         }
-        link.authorLink = authorLink;
       }
 
       // Add domain

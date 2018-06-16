@@ -49,6 +49,7 @@
           {{{content}}}
           <div class="meta">
             <span class="domain"><a href="{{url}}">{{domain}}</a></span>
+            {{#each authors}}
             <span class="author">
               {{#if authorLink}}
                 <a href="{{authorLink}}">
@@ -58,6 +59,7 @@
                 </a>
               {{/if}}
             </span>
+            {{/each}}
             {{#each tags}}
               <span class="tag tag-{{this}}">{{this}}</span>
             {{/each}}
