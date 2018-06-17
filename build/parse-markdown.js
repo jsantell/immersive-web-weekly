@@ -11,9 +11,12 @@ function linkSwapper () {
     // so be sure to reinject it
     replace: function (match, originalRef, nextChar) {
       const ref = originalRef.toLowerCase();
-      const link = links[ref];
+      let link = links[ref];
 
-      if (!link) {
+      // If there's no attached url but it looks like a url...
+      if (!link && /http/.test(ref)) {
+        link = ref;
+      } else if (!link) {
         throw new Error(`No link defined for ${ref}`);
       }
 

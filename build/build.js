@@ -61,6 +61,16 @@ async function build (type) {
         link.authors = [{ author: link.author, authorLink: link.authorLink }];
       }
 
+      // Slugify the categories
+      if (link.category && link.category.length) {
+        link.category = link.category.map(cat => {
+          return {
+            slug: cat.replace(/ /g, '-'),
+            category: cat,
+          };
+        });
+      }
+
       // Fill in empty author links from the links
       for (let author of link.authors) {
         // Reference an authorLink from links.json if we can

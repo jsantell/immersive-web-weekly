@@ -48,6 +48,9 @@
           <h2><a href="{{url}}" target="_new">{{title}}</a></h2>
           {{{content}}}
           <div class="meta">
+            {{#each category}}
+              <span class="tag tag-{{slug}}">{{category}}</span>
+            {{/each}}
             <span class="domain"><a href="{{url}}">{{domain}}</a></span>
             {{#each authors}}
             <span class="author">
@@ -59,9 +62,6 @@
                 </a>
               {{/if}}
             </span>
-            {{/each}}
-            {{#each tags}}
-              <span class="tag tag-{{this}}">{{this}}</span>
             {{/each}}
           </div>
       {{/each}}
