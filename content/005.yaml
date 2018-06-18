@@ -1,7 +1,7 @@
 date: 2018-06-18
 preview: Augmented reality has landed in Chrome Canary
 overview: >
-      Augmented reality has landed in Chrome Canary! The [hit-test feature](https://github.com/immersive-web/hit-test) is the first AR proposal for the [WebXR Device API] to land in a mainstream browser, enabling a minimal feature set for AR experiences built on the web. This API **will** change and is still in an early proposal state, so try it out, post your ideas/concerns/questions on the [Github repo](https://github.com/immersive-web-hit-test), and check out the [other](https://github.com/immersive-web/anchors) [proposals](https://github.com/immersive-web/proposals) as well.
+      Augmented reality has landed in Chrome Canary! The [hit-test feature](https://github.com/immersive-web/hit-test) is the first AR proposal for the [WebXR Device API] to land in a mainstream browser, enabling a baseline feature set for building AR experiences on the web. This API **will** change and is still in an early proposal state, so try it out, post your ideas/concerns/questions on the [Github repo](https://github.com/immersive-web/hit-test), and check out the [other](https://github.com/immersive-web/anchors) [proposals](https://github.com/immersive-web/proposals) as well.
 signed: Jordan
 links:
   - title: Chrome lands AR proposal for WebXR Device API
@@ -51,7 +51,7 @@ links:
       - tutorial
     author: Microsoft
     content: >
-      With the latest [Edge] browser release, WebVR is now supported in [Progressive Web Apps](https://docs.microsoft.com/microsoft-edge/progressive-web-apps). This tutorial walks you through the steps of creating a WebVR experience with [Babylon.js](Babylon.js), publishable to the Microsoft Store as Windows 10 applications.
+      With the latest [Edge] browser release, WebVR is now supported in [Progressive Web Apps](https://docs.microsoft.com/microsoft-edge/progressive-web-apps). This tutorial walks you through the steps of creating a WebVR experience with [Babylon.js], publishable to the Microsoft Store as Windows 10 applications.
   
   - title: WebVR CG is now officially the Immersive Web Community Group
     url: https://www.w3.org/community/immersive-web/
