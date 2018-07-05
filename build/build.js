@@ -61,6 +61,10 @@ async function build (type) {
         link.authors = [{ author: link.author, authorLink: link.authorLink }];
       }
 
+      if (!link.author && !link.authors) {
+        link.authors = [];
+      }
+
       // Slugify the categories
       if (link.category && link.category.length) {
         link.category = link.category.map(cat => {

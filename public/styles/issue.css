@@ -107,6 +107,12 @@ h2 {
   display: inline;
   border-color: #999999;
 }
+.tag-development {
+  border-color: #85ff0a;
+}
+.tag-design {
+  border-color: #85ff0a;
+}
 .tag-tutorial {
   border-color: #85ff0a;
 }
