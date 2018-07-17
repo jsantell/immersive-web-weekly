@@ -674,14 +674,14 @@
                                     </div>
                                     <div id="content">
                                         {{#each links}}
-                                        <h2><a href="{{url}}" target="_new">{{title}}</a></h2>
+                                        <h2><a href="{{{url}}}" target="_new">{{title}}</a></h2>
                                         {{{content}}}
                                         <div class="meta">
                                             {{#each category}}
                                               <span class="tag tag-{{slug}}">{{category}}</span>
                                             {{/each}}
                                             <span> > </span>
-                                            <span class="domain"><a href="{{url}}">{{domain}}</a></span>
+                                            <span class="domain"><a href="{{{url}}}">{{domain}}</a></span>
                                             <span> | </span>
                                             {{#each authors}}
                                             <span class="author">
