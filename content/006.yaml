@@ -24,7 +24,7 @@ links:
     author: Billy Vacheva
     url: https://medium.com/vr-ux-ui/tvori-vr-ux-prototyping-tool-ea8fd3f0f409
     category:
-      - design
+      - ux
     content: >
       Product manager for [LensVR] browser [Billy Vacheva] shares her experience exploring new VR UX using [Tvori] while prototyping an idea for VR browser bookmarks.
 
@@ -41,7 +41,7 @@ links:
     authorLink: http://blog.leapmotion.com/author/eugk/
     url: http://blog.leapmotion.com/designing-cat-explorer/
     category:
-      - design
+      - ux
     content: >
       [Leap Motion] shares the results of their challenge of designing an application for someone who has never used a VR headset, with no instructions whatsoever, focusing on UX for hand tracking.
 
