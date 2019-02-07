@@ -1,0 +1,44 @@
+date: 2018-02-07
+overview: >
+  *\*wakes up from a deep, winterly slumber\**
+  <br />
+  Oh, hi, I didn't see you come in. It's been awhile. But it is 2019!
+  And there have been a lot of updates and progress on the [WebXR Device API]!
+  Enjoy, my winter and summer pals.
+
+signed: Jordan
+links:
+  -
+    title: Real-world Hit Testing merged into WebXR
+    url: https://github.com/immersive-web/webxr/blob/8e1c06511b420a30d34878c472416bd604747cb9/hit-testing-explainer.md
+    author: Nell Waliczek
+    category:
+      - web-platform
+    content: >
+      While several augmented reality APIs have been incubating over the last few months
+      ([hit test](https://github.com/immersive-web/hit-test),
+      [lighting estimation](https://github.com/immersive-web/lighting-estimation),
+      [anchors](https://github.com/immersive-web/anchors)), the first scene understanding
+      feature has been [merged](https://github.com/immersive-web/webxr/blob/8e1c06511b420a30d34878c472416bd604747cb9/hit-testing-explainer.md)
+      into the WebXR Device API proper. The new [hit test explainer](https://github.com/immersive-web/webxr/blob/8e1c06511b420a30d34878c472416bd604747cb9/hit-testing-explainer.md)
+      describes new methods that allow applications to raycast into the real-world
+      and collisions conveying found geometry. Note that this proposed API differs from
+      the [implementation in Chrome](https://developers.google.com/web/updates/2018/06/ar-for-the-web),
+      based off of the [original proposal](https://github.com/immersive-web/hit-test).
+  -
+    title: "The State of WebXR"
+    url: https://docs.google.com/document/d/1R8Bz0_vK9YmY5-ZhsbLtZ9-DDJpTOgNeibFD4SdUnbw/edit
+    author: Google Chrome Developers
+    authorLink: https://google.com
+    category:
+      - web-platform
+    content: >
+
+  -
+    title: OGC adopts 3D Tiles as Community Standard
+    url: http://www.opengeospatial.org/pressroom/pressreleases/2946
+    author: Open Geo Spatial
+    category:
+      - technology
+    content: >
+      https://twitter.com/glTF3D/status/1092787564216573952

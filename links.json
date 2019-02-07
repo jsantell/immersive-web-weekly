@@ -21,13 +21,14 @@
     "daydream": "https://vr.google.com/daydream/",
     "diego gonzález": "https://diekus.com/",
     "edge": "https://www.microsoft.com/windows/microsoft-edge",
-    "firefox reality": "https://blog.mozvr.com/firefox-reality-bringing-the-immersive-web-to-mixed-reality-headsets/",
+    "firefox reality": "https://mixedreality.mozilla.org/firefox-reality",
     "glitch": "https://glitch.com/",
     "google": "https://google.com",
     "google poly": "https://poly.google.com/",
     "gordon brander": "http://gordonbrander.com/",
     "halo labs": "https://www.halolabs.io/",
     "helio": "https://www.magicleap.com/experiences/helio",
+    "htc vive": "https://www.vive.com",
     "immersive web CG": "https://www.w3.org/community/immersive-web/",
     "immersive web community group": "https://www.w3.org/community/immersive-web/",
     "immersivewebweekly@gmail.com": "mailto:immersivewebweekly@gmail.com",
@@ -69,6 +70,7 @@
     "webxr spec": "https://immersive-web.github.io/webxr/",
     "webxr week": "http://www.webxrweek.com",
     "webxr viewer": "https://github.com/mozilla/webxr-viewer",
+    "webvr polyfill": "https://github.com/immersive-web/webvr-polyfill",
     "within": "https://with.in"
   }
 }

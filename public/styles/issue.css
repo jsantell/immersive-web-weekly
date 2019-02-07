@@ -45,7 +45,7 @@ h2 {
 #overview {
   font-style: italic;
   margin: 15px 0px 0px 30px;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 #container {
@@ -67,7 +67,7 @@ h2 {
 #content p {
   margin-top: 5px;
   margin-bottom: 5px;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 #content .meta {
@@ -124,6 +124,9 @@ h2 {
 }
 .tag-web-platform {
   border-color: #222222;
+}
+.tag-browsers {
+  border-color: #9400ff;
 }
 
 .signup-wrapper {
