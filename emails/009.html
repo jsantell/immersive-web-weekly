@@ -668,9 +668,9 @@
                                 <!-- BEGIN MODULE: BODY CONTENT // -->
                                 <div mc:edit="body_content">
                                     <h1><a href="https://immersivewebweekly.com">Immersive Web Weekly</a></h1>
-                                    <div class="info">Issue #009, February 05, 2018, <a href="https://immersivewebweekly.com">immersivewebweekly.com</a></div>
+                                    <div class="info">Immersive Web Weekly: <a href="https://immersivewebweekly.com/issues/009">Issue #009</a>, February 07, 2018</div>
                                     <div id="overview">
-                                        <p><em>*wakes up from a deep, winterly slumber*</em> <br /> Oh, hi, I didn't see you come in. It's been awhile. But it is 2019! And there have been a lot of updates and progress on the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>! Enjoy, my winter and summer pals.</p> <span>– Jordan</span>
+                                        <p><em>*wakes up from a deep, winterly slumber*</em> <br /> Oh, hi, I didn't see you come in. It's been a while. But it is 2019! And there have been a lot of updates and progress on the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>! Enjoy, my winter and summer pals.</p> <span>– Jordan</span>
                                     </div>
                                     <div id="content">
                                         <h2><a href="https://www.w3.org/2019/01/29-immersive-web-minutes.html" target="_new">Immersive Web Working Group F2F</a></h2>
@@ -697,21 +697,8 @@
                                                 </a>
                                             </span>
                                         </div>
-                                        <h2><a href="https://github.com/immersive-web/webxr/blob/8e1c06511b420a30d34878c472416bd604747cb9/hit-testing-explainer.md" target="_new">Real-world Hit Testing merged into WebXR</a></h2>
-                                        <p>While several augmented reality APIs have been incubating over the last few months (<a href="https://github.com/immersive-web/hit-test">hit test</a>, <a href="https://github.com/immersive-web/lighting-estimation">lighting estimation</a>, <a href="https://github.com/immersive-web/anchors">anchors</a>), the first scene understanding feature has been <a href="https://github.com/immersive-web/webxr/blob/8e1c06511b420a30d34878c472416bd604747cb9/hit-testing-explainer.md">merged</a> into the WebXR Device API proper. The new <a href="https://github.com/immersive-web/webxr/blob/8e1c06511b420a30d34878c472416bd604747cb9/hit-testing-explainer.md">hit test explainer</a> describes new methods that allow applications to raycast into the real-world and collisions conveying found geometry. Note that this proposed API differs from the <a href="https://developers.google.com/web/updates/2018/06/ar-for-the-web">implementation in Chrome</a>, based off of the <a href="https://github.com/immersive-web/hit-test">original proposal</a>.</p>
-                                        <div class="meta">
-                                              <span class="tag tag-web-platform">web-platform</span>
-                                            <span> > </span>
-                                            <span class="domain"><a href="https://github.com/immersive-web/webxr/blob/8e1c06511b420a30d34878c472416bd604747cb9/hit-testing-explainer.md">github.com</a></span>
-                                            <span> | </span>
-                                            <span class="author">
-                                                <a href="https://twitter.com/nellwaliczek">
-                                                    Nell Waliczek
-                                                </a>
-                                            </span>
-                                        </div>
                                         <h2><a href="https://digiday.com/marketing/definitely-going-break-things-apple-prepping-ios-change-may-hurt-ar-vr-advertising/" target="_new">&quot;It’s definitely going to break things&quot;: Apple is prepping an iOS change that may hurt AR and VR advertising</a></h2>
-                                        <p>Apple released <a href="https://developer.apple.com/documentation/safari_release_notes/safari_12_1_release_notes">Safari 12.1 Release Notes</a> this week which requires OS opt-in for the <a href="https://developer.mozilla.org/en-US/docs/Web/Events/devicemotion">devicemotion</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/Events/deviceorientation">deviceorientation</a> web APIs. These APIs expose data from (mostly mobile) devices' gyroscope and accelerometer, which is used to synthesize a user's view orientation for Cardboard VR experiences as well as web-based AR experiences. These APIs also are used for <a href="https://arxiv.org/abs/1408.1416">terrifyingly accurate fingerprinting</a> (<a href="https://www.wired.com/story/mobile-websites-can-tap-into-your-phones-sensors-without-asking/">for real</a>) and lack the permission model of newer APIs, like its successor <a href="https://www.w3.org/TR/generic-sensor/">Generic Sensors</a>. This will break XR experiences using these APIs on iOS (like <a href="https://github.com/aframevr/aframe/issues/3976">Aframe</a>, or anything built on the <a href="https://github.com/immersive-web/webvr-polyfill">WebVR Polyfill</a>) unless users opt-in to exposing these APIs. There's <a href="https://github.com/aframevr/aframe/issues/3976">discussion on the deviceorientation spec</a> about adding a permission model to the API for a solution somewhere between deanonymizing users and breaking all existing XR web content on iOS.</p>
+                                        <p>Apple released <a href="https://developer.apple.com/documentation/safari_release_notes/safari_12_1_release_notes">Safari 12.1 Release Notes</a> this week which requires OS opt-in for the <a href="https://developer.mozilla.org/en-US/docs/Web/Events/devicemotion">devicemotion</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/Events/deviceorientation">deviceorientation</a> web APIs. These APIs expose data from (mostly mobile) devices' gyroscope and accelerometer, which is used to synthesize a user's view orientation for Cardboard VR experiences as well as web-based AR experiences. These APIs are also abused for <a href="https://arxiv.org/abs/1408.1416">terrifyingly accurate fingerprinting</a> (<a href="https://www.wired.com/story/mobile-websites-can-tap-into-your-phones-sensors-without-asking/">for real</a>) and lack the permission model of newer APIs, like its successor <a href="https://www.w3.org/TR/generic-sensor/">Generic Sensors</a>. This will break XR experiences using these APIs on iOS (like <a href="https://github.com/aframevr/aframe/issues/3976">A-Frame</a>, or anything built on the <a href="https://github.com/immersive-web/webvr-polyfill">WebVR Polyfill</a>) unless users opt-in to exposing these APIs. There's <a href="https://github.com/w3c/deviceorientation/issues/57">discussion on the deviceorientation spec</a> about adding a permission model to the API for a solution somewhere between deanonymizing users and breaking all existing XR web content on iOS.</p>
                                         <div class="meta">
                                               <span class="tag tag-web-platform">web-platform</span>
                                             <span> > </span>
@@ -732,6 +719,19 @@
                                             <span> | </span>
                                             <span class="author">
                                                     Sean White
+                                            </span>
+                                        </div>
+                                        <h2><a href="http://www.createwebvr.com/" target="_new">createwebvr.com</a></h2>
+                                        <p>A handy cheat sheet for all things in the WebVR ecosystem: frameworks, browsers, social groups, resources and gear.</p>
+                                        <div class="meta">
+                                              <span class="tag tag-development">development</span>
+                                            <span> > </span>
+                                            <span class="domain"><a href="http://www.createwebvr.com/">createwebvr.com</a></span>
+                                            <span> | </span>
+                                            <span class="author">
+                                                <a href="http://damonhernandez.com/">
+                                                    Damon Hernandez
+                                                </a>
                                             </span>
                                         </div>
                                     </div>

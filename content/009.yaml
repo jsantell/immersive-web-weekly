@@ -2,7 +2,7 @@ date: 2018-02-07
 overview: >
   *\*wakes up from a deep, winterly slumber\**
   <br />
-  Oh, hi, I didn't see you come in. It's been awhile. But it is 2019!
+  Oh, hi, I didn't see you come in. It's been a while. But it is 2019!
   And there have been a lot of updates and progress on the [WebXR Device API]!
   Enjoy, my winter and summer pals.
 
@@ -21,7 +21,7 @@ links:
       [Jan 29](https://www.w3.org/2019/01/29-immersive-web-minutes.html),
       [Jan 30](https://www.w3.org/2019/01/30-immersive-web-minutes.html)), as resolutions
       and decisions make their way to the [specification's Github repo](https://github.com/immersive-web/webxr).
-  - 
+  -
     title: WebXR Device API Working Draft Published
     url: https://uploadvr.com/webxr-device-api-working-draft-published/
     author: Ian Hamilton
@@ -32,23 +32,6 @@ links:
       In related standards news, the First Public Working Draft for the WebXR Device API
       [has passed](https://lists.w3.org/Archives/Public/public-immersive-web-wg/2019Jan/0015.html)(!) the working group's [call for consensus](https://lists.w3.org/Archives/Public/public-immersive-web-wg/2019Jan/0003.html). See the [W3C docs](https://www.w3.org/2014/Process-20140801/#rec-advance)
       that describe the journey of a spec from FPWD to Recommendation.
-  -
-    title: Real-world Hit Testing merged into WebXR
-    url: https://github.com/immersive-web/webxr/blob/8e1c06511b420a30d34878c472416bd604747cb9/hit-testing-explainer.md
-    author: Nell Waliczek
-    category:
-      - web-platform
-    content: >
-      While several augmented reality APIs have been incubating over the last few months
-      ([hit test](https://github.com/immersive-web/hit-test),
-      [lighting estimation](https://github.com/immersive-web/lighting-estimation),
-      [anchors](https://github.com/immersive-web/anchors)), the first scene understanding
-      feature has been [merged](https://github.com/immersive-web/webxr/blob/8e1c06511b420a30d34878c472416bd604747cb9/hit-testing-explainer.md)
-      into the WebXR Device API proper. The new [hit test explainer](https://github.com/immersive-web/webxr/blob/8e1c06511b420a30d34878c472416bd604747cb9/hit-testing-explainer.md)
-      describes new methods that allow applications to raycast into the real-world
-      and collisions conveying found geometry. Note that this proposed API differs from
-      the [implementation in Chrome](https://developers.google.com/web/updates/2018/06/ar-for-the-web),
-      based off of the [original proposal](https://github.com/immersive-web/hit-test).
   -
     title: "\"It’s definitely going to break things\": Apple is prepping an iOS change that may hurt AR and VR advertising"
     url: https://digiday.com/marketing/definitely-going-break-things-apple-prepping-ios-change-may-hurt-ar-vr-advertising/
@@ -65,9 +48,9 @@ links:
       experiences. These APIs are also abused for [terrifyingly accurate fingerprinting](https://arxiv.org/abs/1408.1416)
       ([for real](https://www.wired.com/story/mobile-websites-can-tap-into-your-phones-sensors-without-asking/)) and lack
       the permission model of newer APIs, like its successor [Generic Sensors](https://www.w3.org/TR/generic-sensor/).
-      This will break XR experiences using these APIs on iOS (like [Aframe](https://github.com/aframevr/aframe/issues/3976), or anything
+      This will break XR experiences using these APIs on iOS (like [A-Frame](https://github.com/aframevr/aframe/issues/3976), or anything
       built on the [WebVR Polyfill]) unless users opt-in to exposing these APIs.
-      There's [discussion on the deviceorientation spec](https://github.com/aframevr/aframe/issues/3976) about adding
+      There's [discussion on the deviceorientation spec](https://github.com/w3c/deviceorientation/issues/57) about adding
       a permission model to the API for a solution somewhere between deanonymizing users and
       breaking all existing XR web content on iOS.
 
@@ -82,4 +65,13 @@ links:
       headsets. Firefox Reality was released last year, supporting all-in-one Android devices,
       available on [Viveport](https://mixedreality.mozilla.org/firefox-reality), [Oculus Go](https://www.oculus.com/experiences/go/2208418715853974/),
       and [Daydream](https://play.google.com/store/apps/details?id=org.mozilla.vrbrowser).
+
+  -
+    title: createwebvr.com
+    url: http://www.createwebvr.com/
+    author: Damon Hernandez
+    category:
+      - development
+    content: >
+      A handy cheat sheet for all things in the WebVR ecosystem: frameworks, browsers, social groups, resources and gear.
 

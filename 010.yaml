@@ -33,7 +33,14 @@ links:
     category:
       - web-platform
     content: >
-
+  -
+    title: A Quick Guide to Designing for Augmented Reality on Mobile
+    url: https://medium.com/@goatsandbacon/a-quick-guide-to-designing-for-augmented-reality-on-mobile-part-4-f554f5b80c24
+    author: Bushra Mahmood
+    category:
+      - design
+    content: >
+      [Bushra Mahmood] releases part 4 of her designing for augmented reality series.
   -
     title: OGC adopts 3D Tiles as Community Standard
     url: http://www.opengeospatial.org/pressroom/pressreleases/2946
