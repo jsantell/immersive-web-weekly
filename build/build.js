@@ -12,7 +12,7 @@ const parseDomain = require('parse-domain');
 const DOMParser = require('xmldom').DOMParser;
 
 const CONTENT_DIR = path.join(__dirname, '..', 'content');
-const EMAIL_OUTPUT_DIR = path.join(__dirname, '..', 'emails');
+const EMAIL_OUTPUT_DIR = path.join(__dirname, '..', 'public', 'emails');
 const ISSUE_OUTPUT_DIR = path.join(__dirname, '..', 'public', 'issues');
 const TEMPLATE_DIR = path.join(__dirname, '..', 'layouts');
 
