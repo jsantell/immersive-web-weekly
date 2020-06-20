@@ -7,7 +7,8 @@
   "scripts": {
     "build": "node build/build.js",
     "build-demo": "rollup -c",
-    "build-all": "npm run build && npm run build-demo"
+    "build-all": "npm run build && npm run build-demo",
+    "deploy": "rsync -avz --progress public/ immersivewebweekly.com:/var/www/immersivewebweekly.com"
   },
   "author": "Jordan Santell <jordan@jsantell.com>",
   "devDependencies": {
