@@ -11,6 +11,7 @@
     "deploy": "rsync -avz --progress public/ immersivewebweekly.com:/var/www/immersivewebweekly.com"
   },
   "author": "Jordan Santell <jordan@jsantell.com>",
+  "license": "MIT",
   "devDependencies": {
     "glsl-easings": "^1.0.0",
     "glsl-noise": "0.0.0",
