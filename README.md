@@ -1,5 +1,9 @@
 # immersivewebweekly.com
 
+## DEPRECATED
+
+Now hosted [https://github.com/immersive-web/immersive-web-weekly]
+
 ## Structure
 
 * `content/` Where YAML files live of issues
